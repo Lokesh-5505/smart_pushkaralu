@@ -210,6 +210,16 @@ All common build, test, and execution commands from the project root:
 > Once built, your debug APK is located at:  
 > `app/build/outputs/apk/debug/app-debug.apk`
 
+### Download an APK from GitHub Actions
+
+Every push to `main` and every manual workflow run builds an installable debug APK.
+
+1. Open the repository's **Actions** tab and select **Build Android APK**.
+2. Open a successful run and download the `smart-pushkaralu-debug-apk` artifact.
+3. Extract `app-debug.apk`, transfer it to an Android phone, and install it. Android may ask you to allow installation from that source.
+
+This is an Android APK and cannot be installed on iPhone/iPad. A release APK for Play Store distribution must be signed with a private release keystore.
+
 ---
 
 ## Comprehensive Dependency Catalog
