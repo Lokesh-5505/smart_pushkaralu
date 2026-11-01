@@ -243,15 +243,15 @@ class _SmartPushkaraluAppState extends State<SmartPushkaraluApp> {
       case AppTab.settings:
         return _settings();
     }
-
-    int _mobileTabIndex() => switch (tab) {
-          AppTab.home => 0,
-          AppTab.routes => 1,
-          AppTab.stays => 2,
-          AppTab.parking => 3,
-          _ => 4,
-        };
   }
+
+  int _mobileTabIndex() => switch (tab) {
+        AppTab.home => 0,
+        AppTab.routes => 1,
+        AppTab.stays => 2,
+        AppTab.parking => 3,
+        _ => 4,
+      };
 
   Widget _home() {
     return _scroll([
