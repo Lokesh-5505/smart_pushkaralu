@@ -16,3 +16,11 @@
 local.properties
 .env
 debug.keystore
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+pubspec.lock
+ios/Flutter/ephemeral/
+ios/Flutter/Generated.xcconfig
+android/.gradle/
