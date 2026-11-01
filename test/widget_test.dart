@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:smart_pushkaralu/main.dart';
 
@@ -7,7 +8,7 @@ void main() {
 
     expect(find.text('SMART PUSHKARALU'), findsOneWidget);
     expect(find.text('Live ghat crowd density'), findsOneWidget);
-    await tester.scroll(find.byKey(const ValueKey(AppTab.home)), const Offset(0, -600));
+    await tester.drag(find.byKey(const ValueKey(AppTab.home)), const Offset(0, -600));
     await tester.pump();
     expect(find.text('Trip Planner'), findsOneWidget);
 
@@ -19,7 +20,7 @@ void main() {
   testWidgets('simulation updates emergency alert', (tester) async {
     await tester.pumpWidget(const SmartPushkaraluApp());
 
-    await tester.scroll(find.byKey(const ValueKey(AppTab.home)), const Offset(0, -600));
+    await tester.drag(find.byKey(const ValueKey(AppTab.home)), const Offset(0, -600));
     await tester.pump();
     await tester.tap(find.text('Simulate crowd surge'));
     await tester.pump();
