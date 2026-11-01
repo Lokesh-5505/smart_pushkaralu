@@ -7,6 +7,8 @@ void main() {
 
     expect(find.text('SMART PUSHKARALU'), findsOneWidget);
     expect(find.text('Live ghat crowd density'), findsOneWidget);
+    await tester.scroll(find.byKey(const ValueKey(AppTab.home)), const Offset(0, -600));
+    await tester.pump();
     expect(find.text('Trip Planner'), findsOneWidget);
 
     await tester.tap(find.text('Trip Planner'));
@@ -17,6 +19,8 @@ void main() {
   testWidgets('simulation updates emergency alert', (tester) async {
     await tester.pumpWidget(const SmartPushkaraluApp());
 
+    await tester.scroll(find.byKey(const ValueKey(AppTab.home)), const Offset(0, -600));
+    await tester.pump();
     await tester.tap(find.text('Simulate crowd surge'));
     await tester.pump();
 
