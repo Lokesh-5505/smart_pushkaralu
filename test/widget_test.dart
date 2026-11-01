@@ -25,6 +25,8 @@ void main() {
     await tester.tap(find.text('Simulate crowd surge'));
     await tester.pump();
 
+    await tester.drag(find.byKey(const ValueKey(AppTab.home)), const Offset(0, 600));
+    await tester.pump();
     expect(find.text('Crowd surge: Pushkar Ghat entry locked'), findsOneWidget);
   });
 }
